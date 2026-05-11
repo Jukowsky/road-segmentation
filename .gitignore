@@ -1,0 +1,30 @@
+# Large datasets and raw data
+datasets/
+masked_rscd_dataset/
+masked_rscd_dataset_coco/
+sam/
+
+# Training run outputs and checkpoints
+runs/
+
+# Large prediction outputs
+synthetic_predictions_8/
+vvis_predictions/
+vvis_predictions_grillom_confthresh_14/
+vvis_predictions_grillom_confthresh_20/
+vvis_predictions_husum/
+vvis_predictions_trial1_0428/
+vvis_predictions_trial2_maskingcoverage_60_conftreshold_35/
+vvis_predictions_trial3_maskingcoverage_0_confthreshold_27/
+vvis_predictions_trial4_maskcoverage100_confthres_27/
+measuring_domain_gap/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Environment
+.env
+*.egg-info/

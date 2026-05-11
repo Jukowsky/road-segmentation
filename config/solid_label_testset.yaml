@@ -1,0 +1,33 @@
+path: /home/talt_wireten_c/road-segmentation/solid_label_testset
+train: images
+val: images
+
+nc: 27
+names:
+  0: dry_asphalt_severe
+  1: dry_asphalt_slight
+  2: dry_asphalt_smooth
+  3: dry_concrete_severe
+  4: dry_concrete_slight
+  5: dry_concrete_smooth
+  6: dry_gravel
+  7: dry_mud
+  8: fresh_snow
+  9: ice
+  10: melted_snow
+  11: water_asphalt_severe
+  12: water_asphalt_slight
+  13: water_asphalt_smooth
+  14: water_concrete_severe
+  15: water_concrete_slight
+  16: water_concrete_smooth
+  17: water_gravel
+  18: water_mud
+  19: wet_asphalt_severe
+  20: wet_asphalt_slight
+  21: wet_asphalt_smooth
+  22: wet_concrete_severe
+  23: wet_concrete_slight
+  24: wet_concrete_smooth
+  25: wet_gravel
+  26: wet_mud
