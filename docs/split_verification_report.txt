@@ -1,0 +1,12 @@
+=== Exact-file overlap (train.txt vs val_split.txt) ===
+train.txt images     : 1,002,625
+val_split.txt images : 52,769
+Shared files         : 0
+PASS: 0 shared files
+
+=== Mask-shape overlap (disclosure, not a pass/fail check) ===
+Unique mask shapes in train.txt     : 117,266
+Unique mask shapes in val_split.txt : 43,478
+Shapes present in both              : 43,478
+Shared shapes with the SAME _sN sample index on both sides: 0
+(should be 0 — each sample index is used on exactly one side of the split)

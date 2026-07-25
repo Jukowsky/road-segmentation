@@ -15,6 +15,13 @@ Usage:
 
   # Override samples per mask:
   SAMPLES_PER_MASK=5 python scripts/utils/generate_synthetic_dataset_full.py
+
+  # Regenerate the validation portion from held-out RSCD textures instead of
+  # reusing the train-split texture pool (closes the texture-leakage gap
+  # documented in docs/split_verification_report.txt):
+  TEXTURE_ROOT=/home/talt_wireten_c/road-segmentation/datasets/rscd/val \
+  OUTPUT_DIR=/home/talt_wireten_c/road-segmentation/masked_rscd_dataset_coco_full/val_split \
+  python scripts/utils/generate_synthetic_dataset_full.py
 """
 import os
 import sys
@@ -35,8 +42,8 @@ from main import (
 
 # ── Config ────────────────────────────────────────────────────────────────────
 MASK_FOLDER    = "/home/talt_wireten_c/road-segmentation/datasets/coco_binary_masks_full"
-TEXTURE_ROOT   = "/home/talt_wireten_c/road-segmentation/datasets/rscd/train"
-OUTPUT_DIR     = "/home/talt_wireten_c/road-segmentation/masked_rscd_dataset_coco_full"
+TEXTURE_ROOT   = os.environ.get("TEXTURE_ROOT", "/home/talt_wireten_c/road-segmentation/datasets/rscd/train")
+OUTPUT_DIR     = os.environ.get("OUTPUT_DIR", "/home/talt_wireten_c/road-segmentation/masked_rscd_dataset_coco_full")
 TARGET_SIZE    = (512, 512)
 SAMPLES_PER_MASK = int(os.environ.get("SAMPLES_PER_MASK", 9))
 NUM_WORKERS    = max(1, cpu_count() - 1)
