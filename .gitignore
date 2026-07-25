@@ -2,10 +2,12 @@
 datasets/
 masked_rscd_dataset/
 masked_rscd_dataset_coco/
+masked_rscd_dataset_coco_full/
 sam/
 
 # Training run outputs and checkpoints
 runs/
+logs/
 
 # Large prediction outputs
 synthetic_predictions_8/
@@ -18,6 +20,19 @@ vvis_predictions_trial2_maskingcoverage_60_conftreshold_35/
 vvis_predictions_trial3_maskingcoverage_0_confthreshold_27/
 vvis_predictions_trial4_maskcoverage100_confthres_27/
 measuring_domain_gap/
+rcm_sample_predictions/
+rcm_sample_predictions_lowered_threshold/
+rcm_sample_predictions_lowered_threshold_trial2/
+rcm_sample_predictions_lowered_threshold_trial3/
+rcm_sample_predictions_lowered_threshold_trial4/
+rcm_sample_predictions_lowered_threshold_trial5/
+rcm_sample_predictions_lowered_threshold_trial6/
+rcm_sample_predictions_lowered_threshold_trial7/
+compare_seg_cls/
+compare_seg_cls_2/
+20260623_wincls_qual/
+sem_exp26_qual_predictions/
+wincls_grillom_results/
 
 # Python
 __pycache__/
